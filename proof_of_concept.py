@@ -52,7 +52,8 @@ def search_for_track (token, track_name):
   json_result = json.loads(result.content)
   return json_result
 
-search_params = input("Search for a track: ")
-searched_track = search_for_track(token, search_params)
-
-print(f"{search_params} is by {searched_track['tracks']['items'][0]['album']['artists'][0]['name']}.")
+while True:
+  search_params = input("Search for a track: ")
+  searched_track = search_for_track(token, search_params)
+  
+  print(f"{search_params} is by {searched_track['tracks']['items'][0]['album']['artists'][0]['name']}.")
