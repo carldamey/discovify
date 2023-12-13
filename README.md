@@ -1,2 +1,14 @@
 # DISCOVIFY
 Discovify is a 
+
+## WIREFRAMES:
+
+## TECH USED:
+
+## USER FLOW:
+
+## USER STORIES:
+
+## SPRINT BREAKDOWN:
+
+## PROOF OF CONCEPT:
