@@ -5,14 +5,14 @@ Discovify is designed to help you discover new music by using your Spotify profi
 ## WIREFRAMES:
 
 ### Desktop:
-![Desktop Wireframe](./src/wireframe_desktop.png)
+![Desktop Wireframe](./backend/src/wireframe_desktop.png)
 
 ### Mobile:
-![Mobile Wireframe](./src/wireframe_mobile.png)
+![Mobile Wireframe](./backend/src/wireframe_mobile.png)
 
 
 ## PROOF OF CONCEPT:
-![Successfully interfacing with the Spotify Web API](./src/proof_of_concept.png)
+![Successfully interfacing with the Spotify Web API](./backend/src/proof_of_concept.png)
 Above is a screenshot of a successful interface with the Spotify Web API, allowing an artist to be searched for by a track name.
 
 ## TECH USED:
