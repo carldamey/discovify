@@ -1,7 +1,9 @@
 export default function TypeFilters() {
   return(
     <div className="TypeFitlers">
-      type filters
+      <button>Songs</button>
+      <button>Albums</button>
+      <button>Artists</button>
     </div>
   )
 }
