@@ -18,12 +18,11 @@ Above is a screenshot of a successful interface with the Spotify Web API, allowi
 ## TECH USED:
 
 ### Languages:
-- Python
+- JavaScript
 - HTML
 - CSS
 
 ### Frameworks/Libraries/APIs:
-- Django
 - React
 - Spotify Web API
 
