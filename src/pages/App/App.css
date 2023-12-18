@@ -3,6 +3,6 @@
 	box-sizing: border-box;
 }
 
-.App>.main {
+.App > .main {
 	display: flex;
 }
