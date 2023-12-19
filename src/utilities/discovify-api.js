@@ -21,7 +21,8 @@ function getTokenFromUrl() {
 }
 
 function getTopSongs() {
-  console.log(spotify.getMyTopTracks())
+  // console.log(spotify.getMyTopTracks())
+  console.log("hi")
 }
 
 export default methods
