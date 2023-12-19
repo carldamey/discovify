@@ -41,6 +41,7 @@ function App() {
 			{loggedIn && (
 				<button onClick={() => {discovifyAPI.getNowPlaying().then(data => setNowPlaying(data))}}>Check Now Playing</button>
 			)}
+			<button onClick={() => {discovifyAPI.getTopTracks()}}>top tracks</button>
 		</div>
 	)
 }

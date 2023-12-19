@@ -5,6 +5,7 @@ const methods = {
 	getTokenFromUrl,
 	setAccessToken,
 	getNowPlaying,
+  getTopTracks,
 }
 
 function getTokenFromUrl() {
@@ -23,20 +24,7 @@ function setAccessToken(spotifyToken) {
 	spotifyAPI.getMe().then((user) => {
 		console.log(user)
 	})
-	//use api
 }
-
-// function getNowPlaying() {
-// 	spotifyAPI.getMyCurrentPlaybackState().then((response) => {
-// 		console.log("now playing response:", response)
-// 		console.log("name:", response.item.name)
-// 		console.log(typeof response.item.name)
-// 		return {
-// 			name: response.item.name,
-// 			albumArt: response.item.album.images[0].url,
-// 		}
-// 	})
-// }
 
 function getNowPlaying() {
   return new Promise((resolve, reject) => {
@@ -50,16 +38,17 @@ function getNowPlaying() {
       console.error(error)
     })
   })
-	spotifyAPI.getMyCurrentPlaybackState().then((response) => {
-		console.log("now playing response:", response)
-		console.log("name:", response.item.name)
-		console.log(typeof response.item.name)
-		return {
-			name: response.item.name,
-			albumArt: response.item.album.images[0].url,
-		}
-	})
+}
+
+function getTopTracks() {
+  return new Promise((resolve, reject) => {
+    spotifyAPI.getMyTopTracks({"time_range": "short_term"}).then((response) => {
+      console.log("response for top tracks:", response)
+      resolve({
+        response
+      })
+    })
+  })
 }
 
 export default methods
-
