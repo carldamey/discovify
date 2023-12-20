@@ -165,7 +165,7 @@ async function searchTracksByAverage() {
 					target_tempo: response.tempo,
 					target_valence: response.valence,
 				})
-				.then((response) => resolve(response))
+				.then((response) => resolve(Object.values(Object.values(response.tracks))))
 		})
 	})
 }

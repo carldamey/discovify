@@ -1,6 +1,5 @@
 import logo from "../../img/logo.svg"
 import discovifyAPI from "../../utilities/discovify-api"
-import SpotifyWebApi from "spotify-web-api-js"
 import "./App.css"
 import React, {useState, useEffect} from "react"
 import Navbar from "../../components/NavBar/Navbar"
@@ -11,6 +10,7 @@ function App() {
 	const [token, setToken] = useState("")
 	const [nowPlaying, setNowPlaying] = useState({})
 	const [loggedIn, setLoggedin] = useState(false)
+	const [songRecs, setSongRecs] = useState([])
 
 	useEffect(() => {
 		console.log("token from url:", discovifyAPI.getTokenFromUrl())
@@ -29,8 +29,8 @@ function App() {
 		<div className="App">
 			<Navbar loggedIn={loggedIn} />
 			<div className="main">
-				<SearchArea />
-				<ResultsArea />
+				<SearchArea loggedIn={loggedIn} songRecs={songRecs} setSongRecs={setSongRecs}/>
+				<ResultsArea songRecs={songRecs}/>
 			</div>
 			{/* {loggedIn && (
 				<>
@@ -59,6 +59,8 @@ function App() {
 			>
 				test button
 			</button> */}
+			<button onClick={() => discovifyAPI.searchTracksByAverage().then(response => console.log(response))}>test</button>
+
 		</div>
 	)
 }

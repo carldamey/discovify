@@ -3,6 +3,7 @@
 	border: 1px solid green;
 	align-items: center;
 	justify-content: center;
+	-ms-overflow-style: none;
 }
 
 .App {
@@ -23,4 +24,9 @@
 	height: 80%;
 	margin: 0 auto;
 	margin-top: 7.5vh;
+	justify-content: space-around;
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
