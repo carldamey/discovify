@@ -41,7 +41,7 @@ function App() {
 			{loggedIn && (
 				<button onClick={() => {discovifyAPI.getNowPlaying().then(data => setNowPlaying(data))}}>Check Now Playing</button>
 			)}
-			<button onClick={() => {discovifyAPI.getTopArtists()}}>test button</button>
+			<button onClick={() => {discovifyAPI.getTopGenres()}}>test button</button>
 		</div>
 	)
 }

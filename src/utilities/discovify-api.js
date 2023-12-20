@@ -64,16 +64,35 @@ function getTopArtists() {
 					topArtistsArray.push(artist.id)
 				})
 			})
-			console.log(topArtistsArray)
-			resolve(topArtistsArray)
+			spotifyAPI.getArtists(topArtistsArray).then((response) => {
+				resolve(response.artists)
+			})
 		})
 	})
 }
 
 function getTopGenres() {
 	return new Promise((resolve, reject) => {
-		getTopTracks().then((response) => {
-			console.log("response:", response)
+		getTopArtists().then((response) => {
+			const topGenresArray = []
+			for (const artist in response) {
+				response[artist].genres.forEach((genre) => {
+					topGenresArray.push(genre)
+				})
+			}
+
+			const genreFrequency = {}
+			topGenresArray.forEach((genre) => {
+				if (!genreFrequency[genre]) genreFrequency[genre] = 1
+				else genreFrequency[genre]++
+			})
+
+			const topGenresEntries = Object.entries(genreFrequency)
+			const sortedGenresEntries = topGenresEntries.sort((a, b) => b[1] - a[1])
+			const topFiveGenres = sortedGenresEntries
+				.slice(0, 5)
+				.map((entry) => entry[0])
+			resolve(topFiveGenres)
 		})
 	})
 }
