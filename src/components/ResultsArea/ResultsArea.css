@@ -1,4 +1,8 @@
 .ResultsArea {
   overflow-y: scroll;
   height: 100%;
+  border: 3vh solid black;
+  background: purple;
+  width: 40%;
+  display: flex;
 }

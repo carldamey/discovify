@@ -15,6 +15,8 @@ export default function Results({songRecs}) {
         <div className="song">
           <img src={song.album.images[1].url}/>
           {song.name}
+          <br/>
+          {song.artists[0].name}
         </div>)
       })
       }

@@ -1,0 +1,4 @@
+.SliderSection {
+  display: flex;
+  flex-direction: column;
+}
