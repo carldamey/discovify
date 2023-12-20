@@ -7,6 +7,7 @@ const methods = {
 	getNowPlaying,
 	getTopTracks,
 	getTracksFeatures,
+	getAttributeAverages,
 }
 
 function getTokenFromUrl() {
@@ -65,6 +66,33 @@ function getTracksFeatures() {
 			console.log("track ids:", trackIdArray)
 			spotifyAPI.getAudioFeaturesForTracks(trackIdArray).then((response) => {
 				resolve(response.audio_features)
+			})
+		})
+	})
+}
+
+function getAttributeAverages() {
+	return new Promise((resolve, reject) => {
+		const averages = {
+			acousticness: 0,
+			danceability: 0,
+			energy: 0,
+			tempo: 0,
+			valence: 0,
+		}
+		getTracksFeatures().then((response) => {
+			response.forEach((track) => {
+				for (const attribute in averages) {
+					averages[attribute] += track[attribute]
+				}
+			})
+			averages.popularity = 0
+			getTopTracks().then((response) => {
+				response.forEach((track) => (averages.popularity += track.popularity))
+				for (const attribute in averages) {
+					averages[attribute] /= 20
+          resolve(averages)
+				}
 			})
 		})
 	})

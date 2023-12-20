@@ -41,7 +41,7 @@ function App() {
 			{loggedIn && (
 				<button onClick={() => {discovifyAPI.getNowPlaying().then(data => setNowPlaying(data))}}>Check Now Playing</button>
 			)}
-			<button onClick={() => {discovifyAPI.getTracksFeatures().then(data => console.log(data))}}>test button</button>
+			<button onClick={() => {discovifyAPI.getAttributeAverages().then(response => console.log("avg", response))}}>test button</button>
 		</div>
 	)
 }
