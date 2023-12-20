@@ -75,7 +75,7 @@ function getTopTracks() {
 function getTopArtists() {
 	return new Promise((resolve, reject) => {
 		const topArtists = []
-		spotifyAPI.getMyTopArtists({time_range: "short_term"}).then((response) => {
+		spotifyAPI.getMyTopArtists({time_range: "medium_term"}).then((response) => {
 			for (let i = 0; i < 5; i++) {
 				topArtists.push(response.items[i].id)
 			}

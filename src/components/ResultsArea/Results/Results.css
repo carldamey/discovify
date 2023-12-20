@@ -1,8 +1,22 @@
 .Results {
   /* overflow-y: scroll; */
   align-items: stretch;
-
 }
 
+.song {
+  color: white;
+  margin: 2vh auto;
+  font-size:xx-large;
+  text-align: start;
+  text-justify: auto;
+  background-color: gray;
+  border: 1vh solid black;
+}
 
-  
+.song>img {
+  height: 200px;
+  border: 1vh solid black;
+  border-style: ridge;
+  border-radius: 10%;
+  align-items: flex-start;
+}
