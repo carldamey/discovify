@@ -1,0 +1,1 @@
+web: node auth_server/authorization/authorization_code/app.js
