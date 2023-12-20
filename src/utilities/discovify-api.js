@@ -6,8 +6,11 @@ const methods = {
 	setAccessToken,
 	getNowPlaying,
 	getTopTracks,
+	getTopArtists,
+	getTopGenres,
 	getTracksFeatures,
 	getAttributeAverages,
+	searchTracksByAverage,
 }
 
 function getTokenFromUrl() {
@@ -47,11 +50,30 @@ function getNowPlaying() {
 function getTopTracks() {
 	return new Promise((resolve, reject) => {
 		spotifyAPI.getMyTopTracks({time_range: "short_term"}).then((response) => {
-			console.log(
-				"type of response for top tracks:",
-				typeof Object.entries(response.items)
-			)
 			resolve(response.items)
+		})
+	})
+}
+
+function getTopArtists() {
+	return new Promise((resolve, reject) => {
+		getTopTracks().then((response) => {
+			const topArtistsArray = []
+			response.forEach((track) => {
+				track.artists.forEach((artist) => {
+					topArtistsArray.push(artist.id)
+				})
+			})
+			console.log(topArtistsArray)
+			resolve(topArtistsArray)
+		})
+	})
+}
+
+function getTopGenres() {
+	return new Promise((resolve, reject) => {
+		getTopTracks().then((response) => {
+			console.log("response:", response)
 		})
 	})
 }
@@ -91,8 +113,23 @@ function getAttributeAverages() {
 				response.forEach((track) => (averages.popularity += track.popularity))
 				for (const attribute in averages) {
 					averages[attribute] /= 20
-          resolve(averages)
+					resolve(averages)
 				}
+			})
+		})
+	})
+}
+
+function searchTracksByAverage() {
+	return new Promise((resolve, reject) => {
+		getAttributeAverages().then((response) => {
+			spotifyAPI.getRecommendations({
+				target_acousticness: response.acousticness,
+				target_danceability: response.danceability,
+				target_energy: response.energy,
+				target_popularity: response.popularity,
+				target_tempo: response.tempo,
+				target_valence: response.valence,
 			})
 		})
 	})
