@@ -1,8 +1,21 @@
+* {
+
+	border: 1px solid green;
+	align-items: center;
+	justify-content: center;
+}
+
 .App {
+	height: 100vh;
 	text-align: center;
 	box-sizing: border-box;
+	background: rgb(75,75,75);
+background: radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(5,5,6,1) 100%);
 }
 
 .App > .main {
 	display: flex;
+	width: 80%;
+	height: 80%;
+	margin: 0 auto;
 }

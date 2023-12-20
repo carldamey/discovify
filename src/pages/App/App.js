@@ -27,21 +27,38 @@ function App() {
 
 	return (
 		<div className="App">
-			<Navbar loggedIn={loggedIn}/>
+			<Navbar loggedIn={loggedIn} />
 			<div className="main">
 				<SearchArea />
-				<ResultsArea/>
+				<ResultsArea />
 			</div>
-			{loggedIn && (
+			{/* {loggedIn && (
 				<>
 					<div>Now Playing: {nowPlaying.name}</div>
-					<img src={nowPlaying.albumArt} style={{height: 150}}/>
+					<img
+						src={nowPlaying.albumArt}
+						style={{height: 150}}
+					/>
 				</>
 			)}
 			{loggedIn && (
-				<button onClick={() => {discovifyAPI.getNowPlaying().then(data => setNowPlaying(data))}}>Check Now Playing</button>
+				<button
+					onClick={() => {
+						discovifyAPI.getNowPlaying().then((data) => setNowPlaying(data))
+					}}
+				>
+					Check Now Playing
+				</button>
 			)}
-			<button onClick={() => {discovifyAPI.searchTracksByAverage().then(response => console.log(response))}}>test button</button>
+			<button
+				onClick={() => {
+					discovifyAPI
+						.searchTracksByAverage()
+						.then((response) => console.log(response))
+				}}
+			>
+				test button
+			</button> */}
 		</div>
 	)
 }
