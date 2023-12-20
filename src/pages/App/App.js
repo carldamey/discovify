@@ -30,7 +30,7 @@ function App() {
 			<Navbar loggedIn={loggedIn}/>
 			<div className="main">
 				<SearchArea />
-				<ResultsArea />
+				<ResultsArea/>
 			</div>
 			{loggedIn && (
 				<>
@@ -41,7 +41,7 @@ function App() {
 			{loggedIn && (
 				<button onClick={() => {discovifyAPI.getNowPlaying().then(data => setNowPlaying(data))}}>Check Now Playing</button>
 			)}
-			<button onClick={() => {discovifyAPI.getTopGenres()}}>test button</button>
+			<button onClick={() => {discovifyAPI.searchTracksByAverage().then(response => console.log(response))}}>test button</button>
 		</div>
 	)
 }

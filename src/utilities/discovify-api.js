@@ -11,6 +11,7 @@ const methods = {
 	getTracksFeatures,
 	getAttributeAverages,
 	searchTracksByAverage,
+	genreSeeds,
 }
 
 function getTokenFromUrl() {
@@ -55,18 +56,30 @@ function getTopTracks() {
 	})
 }
 
+// function getTopArtists() {
+// 	return new Promise((resolve, reject) => {
+// 		getTopTracks().then((response) => {
+// 			const topArtistsArray = []
+// 			response.forEach((track) => {
+// 				track.artists.forEach((artist) => {
+// 					topArtistsArray.push(artist.id)
+// 				})
+// 			})
+// 			spotifyAPI.getArtists(topArtistsArray).then((response) => {
+// 				resolve(response.artists)
+// 			})
+// 		})
+// 	})
+// }
+
 function getTopArtists() {
 	return new Promise((resolve, reject) => {
-		getTopTracks().then((response) => {
-			const topArtistsArray = []
-			response.forEach((track) => {
-				track.artists.forEach((artist) => {
-					topArtistsArray.push(artist.id)
-				})
-			})
-			spotifyAPI.getArtists(topArtistsArray).then((response) => {
-				resolve(response.artists)
-			})
+		const topArtists = []
+		spotifyAPI.getMyTopArtists({time_range: "short_term"}).then((response) => {
+			for (let i = 0; i < 5; i++) {
+				topArtists.push(response.items[i].id)
+			}
+			resolve(topArtists.join(","))
 		})
 	})
 }
@@ -104,7 +117,6 @@ function getTracksFeatures() {
 			for (const track in response) {
 				trackIdArray.push(response[track].id)
 			}
-			console.log("track ids:", trackIdArray)
 			spotifyAPI.getAudioFeaturesForTracks(trackIdArray).then((response) => {
 				resolve(response.audio_features)
 			})
@@ -139,19 +151,27 @@ function getAttributeAverages() {
 	})
 }
 
-function searchTracksByAverage() {
+async function searchTracksByAverage() {
+	const seedArtists = await getTopArtists()
 	return new Promise((resolve, reject) => {
 		getAttributeAverages().then((response) => {
-			spotifyAPI.getRecommendations({
-				target_acousticness: response.acousticness,
-				target_danceability: response.danceability,
-				target_energy: response.energy,
-				target_popularity: response.popularity,
-				target_tempo: response.tempo,
-				target_valence: response.valence,
-			})
+			spotifyAPI
+				.getRecommendations({
+					seed_artists: seedArtists,
+					target_acousticness: response.acousticness,
+					target_danceability: response.danceability,
+					target_energy: response.energy,
+					target_popularity: Math.floor(response.popularity),
+					target_tempo: response.tempo,
+					target_valence: response.valence,
+				})
+				.then((response) => resolve(response))
 		})
 	})
+}
+
+function genreSeeds() {
+	spotifyAPI.getAvailableGenreSeeds().then((response) => console.log(response))
 }
 
 export default methods
