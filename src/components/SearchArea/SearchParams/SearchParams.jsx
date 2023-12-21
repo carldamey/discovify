@@ -37,6 +37,7 @@ export default function SearchParams() {
 	function handleSearch(e) {
 		e.preventDefault()
 		console.log(formData)
+		discovifyAPI.searchTracksByParams(formData)
 	}
 
 	return (

@@ -12,6 +12,7 @@ const methods = {
 	getAttributeAverages,
 	searchTracksByAverage,
 	genreSeeds,
+	searchTracksByParams,
 }
 
 function getTokenFromUrl() {
@@ -165,8 +166,36 @@ async function searchTracksByAverage() {
 					target_tempo: response.tempo,
 					target_valence: response.valence,
 				})
-				.then((response) => resolve(Object.values(Object.values(response.tracks))))
+				.then((response) =>
+					resolve(Object.values(Object.values(response.tracks)))
+				)
 		})
+	})
+}
+
+function searchTracksByParams(formData) {
+	let genreSeedsString = ""
+	for (let i = 1; i <= 5; i++) {
+		if (formData[`genre${i}`] === "-NONE-") formData[`genre${i}`] = ""
+		console.log(typeof formData[`genre${i}`])
+		genreSeedsString += formData[`genre${i}`] + ","
+		console.log(genreSeedsString)
+	}
+	return new Promise((resolve, reject) => {
+		spotifyAPI
+			.getRecommendations({
+				seed_genres: genreSeedsString,
+				target_acousticness: formData.acousticness,
+				target_danceability: formData.danceability,
+				target_energy: formData.energy,
+				target_popularity: parseInt(formData.popularity),
+				target_tempo: formData.tempo,
+				target_valence: formData.valence,
+			})
+			.then((response) => {
+				console.log(Object.values(Object.values(response.tracks)))
+				resolve(Object.values(Object.values(response.tracks)))
+			})
 	})
 }
 
