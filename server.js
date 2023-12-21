@@ -7,8 +7,7 @@
  * https://developer.spotify.com/documentation/web-api/tutorials/code-flow
  */
 
-var path = require("path")
-require("dotenv").config({path: path.resolve(__dirname, "./env")})
+require("dotenv").config()
 
 var express = require("express")
 var request = require("request")
@@ -150,5 +149,5 @@ app.get("/refresh_token", function (req, res) {
 	})
 })
 
-console.log("Listening on 8888")
+console.log("Listening on " + process.env.PORT)
 app.listen(process.env.PORT || 8888)
