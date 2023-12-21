@@ -49,9 +49,22 @@ In the future, I intend to add:
 - The ability to use the web player API to sample recommended songs
 - A more polished and professional looking UI
 - More variation in the personalized song recommendations
+- A responsive UI
+
+## CREATION:
+This project was developed in a one week sprint as a capstone project for my bootcamp. The original intention was to use Django rather than react, however, after considering the ambitiousness of my ideas, being slightly newer to Django, and the short timeframe allotted, I decided about midway through the sprint to swtich to JavaScript, and dedicate another project to learning the DR stack more thoroughly. 
+
+Interfacing with the API was by far the biggest time sink for me. It took quite a while for me to piece together how it all worked, but it was immensely satisfying each time one of my functions would finally successfully resolve.
+
+I took a lot more care into refining my wireframes for this project, and I think it served me very well, allowing me to hide elements I originally intended to be in the original release, but didn't quite have time for, in a way that's as easy as uncommenting a few components and getting back to work on them.
+
+Overall I'm quite proud of this project and I learned a lot in a very short timespan. I'm excited to build more features out and to polish the UI further.
 
 ## UPDATE LOG:
 
 ### 12/21/2023 Original Sprint Finished - v1.0
+
+## KNOWN ISSUES:
+- The border above the playlist button cuts off part of any song card intersecting with it.
 
 - Basic features implemented over one-week sprint
