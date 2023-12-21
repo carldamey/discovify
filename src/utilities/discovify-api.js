@@ -174,7 +174,7 @@ function searchTracksByParams(formData) {
 				target_acousticness: formData.acousticness,
 				target_danceability: formData.danceability,
 				target_energy: formData.energy,
-				target_popularity: parseInt(formData.popularity),
+				max_popularity: parseInt(formData.popularity),
 				target_tempo: formData.tempo,
 				target_valence: formData.valence,
 			})

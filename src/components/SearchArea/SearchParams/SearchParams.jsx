@@ -132,8 +132,8 @@ export default function SearchParams({setSongRecs}) {
 				</div>
 
 				<div className="dropdowns">
-					<label>
-						GENRES:
+					
+						<h3>GENRES:</h3>
 						<div className="dropdown">
 							<select
 								name="genre1"
@@ -145,7 +145,7 @@ export default function SearchParams({setSongRecs}) {
 								})}
 							</select>
 						</div>
-					</label>
+					
 
 					<div className="dropdown">
 						<select

@@ -1,4 +1,33 @@
 .Navbar {
-  background-color: purple;
+	background: rgb(75, 75, 75);
+	background: linear-gradient(
+		360deg,
+		rgba(67, 7, 126, 1) 0%,
+		rgb(110, 12, 208) 100%
+	);
+	display: flex;
+  border-bottom: 1vmin ridge white;
+  color: white;
+  font-size: xx-large;
+  height: 10vmin;
+}
+
+.title {
+  text-align: left;
+  width: 100%;
+  margin-left: 5%;
+}
+
+a {
+  width: 10%;
+  color: white;
+  flex-grow: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.116);
 }

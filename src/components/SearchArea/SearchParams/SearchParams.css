@@ -2,38 +2,60 @@
 	display: flex;
 	flex-direction: row;
 	font-size: xx-large;
+	width: 100%;
 }
 
 .slider {
-	width: 100%;
+	/* align-items: stretch; */
   margin: 5% auto;
+	border: .5vmin ridge black;
+	background-color: rgba(128, 128, 128, 0.678);
+	color: white;
 }
 
 .slider>range {
-  display: flex;
-  align-items: end;
+ width: 100%
 }
 
-.dropdown {
-	cursor: pointer;
-	outline: 0;
-	color: #e1e1e1ff;
-	font-size: 21px;
-	padding: 8px 10px;
-	min-width: 284px;
-	font-weight: bold;
-	border-radius: 10px;
-	border: 2px solid #d6d6d6;
-	background-color: #454545ff;
-	box-shadow: 0px 0px 5px #000000;
-}
-.dropdown:hover,
-.dropdown:focus {
-	background-color: #ffffff;
-	color: #000000;
-	border: 2px solid #969696;
+h3 {
+	margin: 1vmin 0 0;
+	color: white;
 }
 
-.dropdowns {
-	margin-top: 10%;
+/* Style the select element */
+select {
+  padding: 8px;
+  border: .5vmin ridge black;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.678);
+	width: 100%;
+	margin: .5vmin 0;
+}
+
+/* Style the dropdown arrow */
+select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #333 transparent transparent transparent;
+  pointer-events: none;
+}
+
+/* Style the dropdown options */
+select option {
+  color: #333;
+  background-color: #fff;
+}
+
+/* Hover effect on dropdown options */
+select option:hover {
+  background-color: #f2f2f2;
 }

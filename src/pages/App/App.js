@@ -28,10 +28,12 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar loggedIn={loggedIn} />
+			{loggedIn ? 
 			<div className="main">
 				<SearchArea loggedIn={loggedIn} setSongRecs={setSongRecs}/>
 				<ResultsArea songRecs={songRecs}/>
-			</div>
+			</div> : 
+				<h1>Log in to get started!</h1>}
 		</div>
 	)
 }

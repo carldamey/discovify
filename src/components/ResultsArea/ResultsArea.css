@@ -12,7 +12,6 @@ display: flex;
 
 .playlist {
   border-top: 2vmin ridge black;
-  
   width: 100%;
   margin: 1vmin auto 1vmin;
 }

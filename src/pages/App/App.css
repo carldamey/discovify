@@ -4,12 +4,13 @@
 	align-items: center;
 	justify-content: center;
 	-ms-overflow-style: none;
+	box-sizing: border-box;
+	color: white;
 }
 
 .App {
 	height: 100vh;
 	text-align: center;
-	box-sizing: border-box;
 	background: rgb(75, 75, 75);
 	background: radial-gradient(
 		circle,
