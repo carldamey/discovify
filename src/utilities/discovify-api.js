@@ -189,6 +189,7 @@ function genreSeeds() {
 function createPlaylist() {
 	return new Promise((resolve, reject) => {
 		spotifyAPI.getMe().then((user) => {
+			console.log(user)
 			spotifyAPI
 				.createPlaylist(user.id, {
 					name: `${user.name}'s DISCOVIFY Playlist - ${new Date().toLocaleDateString()}`,
