@@ -30,7 +30,7 @@ https://discovify-57edf8e39469.herokuapp.com/#
 Upon opening the app, you will be prompted to authenticate with your Spotify account. After doing so, you will be greeted with a search panel on the left, and a results panel on the right.
 
 ### Searching:
-In the search panel, you can fine-tune what you're looking for based on different song features and genres. Alternatively, you can simply press "FOR ME" to have a list of songs curated to your specific tastes fill the results panel.
+In the search panel, you can fine-tune what you're looking for based on different song features and genres. Alternatively, you can simply press "FOR ME" to have a list of songs curated to your specific tastes fill the results panel. The "FOR ME" recommendations are searched with an average of each parameter in your 20 most listened to songs, and then additionally seeded with your 20 most listened to artists.
 
 ### Recommendation Results: 
 Once recommendations are visible, you can scroll through the results panel on the right to view them, clicking on a song will take you to that song's Spotify page, and if you desire, you can click the "CREATE PLAYLIST" button below, to turn your recommendations into a Spotify playlist on your account for you to easily listen to. (These playlists are private by default, but can be made public from your Spotify account)
