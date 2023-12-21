@@ -1,0 +1,10 @@
+.SearchParams {
+  display: flex;
+  flex-direction: row;
+  font-size: xx-large;
+  /* background-color: aqua; */
+}
+
+.slider {
+  width: 10vmin;
+}
