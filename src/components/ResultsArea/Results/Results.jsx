@@ -8,11 +8,10 @@ export default function Results({songRecs}) {
           <p>{song.name}</p>
         })
       }}} */}
-      Results
       {songRecs.length > 0 && 
       songRecs.map(song => {
         return(
-        <div className="song">
+        <div className="song"  onClick={() => {window.open(song.external_urls.spotify, "_blank")}}>
           <div className="song-image">
           <img src={song.album.images[1].url}/>
           </div>

@@ -1,11 +1,13 @@
-import Results from "./Results/Results";
+import Results from "./Results/Results"
 import "./ResultsArea.css"
 
 export default function ResultsArea({songRecs}) {
-  return(
-    <div className="ResultsArea">
-      <Results songRecs={songRecs}/>
-      <button>playlist</button>
-    </div>
-  )
+	return (
+		<div className="ResultsArea">
+			<Results songRecs={songRecs} />
+			<div className="playlist">
+				<button>playlist</button>
+			</div>
+		</div>
+	)
 }

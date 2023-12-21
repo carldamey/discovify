@@ -1,30 +1,39 @@
 .SearchParams {
-  display: flex;
-  flex-direction: row;
-  font-size: xx-large;
-  /* background-color: aqua; */
+	display: flex;
+	flex-direction: row;
+	font-size: xx-large;
 }
 
 .slider {
-  width: 100%;
+	width: 100%;
+  margin: 5% auto;
 }
 
+.slider>range {
+  display: flex;
+  align-items: end;
+}
 
 .dropdown {
 	cursor: pointer;
-	outline:0;
-	color: #E1E1E1FF;
+	outline: 0;
+	color: #e1e1e1ff;
 	font-size: 21px;
 	padding: 8px 10px;
 	min-width: 284px;
 	font-weight: bold;
 	border-radius: 10px;
 	border: 2px solid #d6d6d6;
-	background-color: #454545FF;
+	background-color: #454545ff;
 	box-shadow: 0px 0px 5px #000000;
 }
-.dropdown:hover, .dropdown:focus {
+.dropdown:hover,
+.dropdown:focus {
 	background-color: #ffffff;
 	color: #000000;
 	border: 2px solid #969696;
+}
+
+.dropdowns {
+	margin-top: 10%;
 }
