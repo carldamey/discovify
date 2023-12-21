@@ -7,7 +7,11 @@ export default function ResultsArea({songRecs}) {
 		<div className="ResultsArea">
 			<Results songRecs={songRecs} />
 			<div className="playlist">
-				{songRecs.length > 0 && <button onClick={() => discovifyAPI.createAndFillPlaylist(songRecs)}>CREATE PLAYLIST</button>}
+				{songRecs.length > 0 && (
+					<button onClick={() => discovifyAPI.createAndFillPlaylist(songRecs)}>
+						CREATE PLAYLIST
+					</button>
+				)}
 			</div>
 		</div>
 	)

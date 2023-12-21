@@ -6,11 +6,11 @@ import discovifyAPI from "../../../utilities/discovify-api"
 export default function SearchParams({setSongRecs}) {
 	const [formData, setFormData] = useState({
 		popularity: 50,
-		energy: .5,
-		tempo: .5,
-		valence: .5,
-		danceability: .5,
-		acousticness: .5,
+		energy: 0.5,
+		tempo: 0.5,
+		valence: 0.5,
+		danceability: 0.5,
+		acousticness: 0.5,
 		genre1: "acoustic",
 		genre2: "-NONE-",
 		genre3: "-NONE-",
@@ -132,20 +132,18 @@ export default function SearchParams({setSongRecs}) {
 				</div>
 
 				<div className="dropdowns">
-					
-						<h3>GENRES:</h3>
-						<div className="dropdown">
-							<select
-								name="genre1"
-								value={formData.genre1}
-								onChange={handleDropdownChange}
-							>
-								{[...genres.slice(1)].map((genre) => {
-									return <option value={genre}>{genre.toUpperCase()}</option>
-								})}
-							</select>
-						</div>
-					
+					<h3>GENRES:</h3>
+					<div className="dropdown">
+						<select
+							name="genre1"
+							value={formData.genre1}
+							onChange={handleDropdownChange}
+						>
+							{[...genres.slice(1)].map((genre) => {
+								return <option value={genre}>{genre.toUpperCase()}</option>
+							})}
+						</select>
+					</div>
 
 					<div className="dropdown">
 						<select
@@ -195,7 +193,15 @@ export default function SearchParams({setSongRecs}) {
 						</select>
 					</div>
 				</div>
-				<button onClick={() => discovifyAPI.searchTracksByAverage().then(response => setSongRecs(response))}>FOR ME</button>
+				<button
+					onClick={() =>
+						discovifyAPI
+							.searchTracksByAverage()
+							.then((response) => setSongRecs(response))
+					}
+				>
+					FOR ME
+				</button>
 				<button type="submit">SEARCH</button>
 			</form>
 		</div>

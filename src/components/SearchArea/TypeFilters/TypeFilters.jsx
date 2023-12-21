@@ -1,3 +1,5 @@
+import "./TypeFilters.css"
+
 export default function TypeFilters() {
 	return (
 		<div className="TypeFitlers">

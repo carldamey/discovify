@@ -30,8 +30,7 @@ function getTokenFromUrl() {
 
 function setAccessToken(spotifyToken) {
 	spotifyAPI.setAccessToken(spotifyToken)
-	spotifyAPI.getMe().then((user) => {
-	})
+	spotifyAPI.getMe().then((user) => {})
 }
 
 function getNowPlaying() {
@@ -182,7 +181,9 @@ function searchTracksByParams(formData) {
 }
 
 function genreSeeds() {
-	spotifyAPI.getAvailableGenreSeeds().then((response) => {return response})
+	spotifyAPI.getAvailableGenreSeeds().then((response) => {
+		return response
+	})
 }
 
 function createPlaylist() {
@@ -190,7 +191,7 @@ function createPlaylist() {
 		spotifyAPI.getMe().then((user) => {
 			spotifyAPI
 				.createPlaylist(user.id, {
-					name: `Discovify Playlist - ${new Date().toLocaleDateString()}`,
+					name: `${user.name}'s DISCOVIFY Playlist - ${new Date().toLocaleDateString()}`,
 				})
 				.then((playlist) => {
 					resolve(playlist)
@@ -201,13 +202,14 @@ function createPlaylist() {
 
 function createAndFillPlaylist(songRecs) {
 	let songUris = []
-	songRecs.forEach(song => {
+	songRecs.forEach((song) => {
 		songUris.push(song.uri)
 	})
 	return new Promise((resolve, reject) => {
-	createPlaylist().then((playlist) => {
-		spotifyAPI.addTracksToPlaylist(playlist.id, songUris)
-	})})
+		createPlaylist().then((playlist) => {
+			spotifyAPI.addTracksToPlaylist(playlist.id, songUris)
+		})
+	})
 }
 
 export default methods

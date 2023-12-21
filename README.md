@@ -1,79 +1,57 @@
 # DISCOVIFY
-Discovify is designed to help you discover new music by using your Spotify profile to establish music recommendations.
 
+DISCOVIFY is a React-based music recommendation that makes heavy use of Spotify's web api. Users can authenticate using a Spotify account, and can then search for music based on several parameters, or alternatively, have a search made for you, based on your profile's most streamed songs. Songs can be viewed individualy by clicking on them, and if desired, a playlist can be created with these results by simply pressing its respective button underneath the recommendations.
 
-## WIREFRAMES:
+https://discovify-57edf8e39469.herokuapp.com/#
 
-### Desktop:
-![Desktop Wireframe](./public/wireframes/wireframe_desktop.png)
-
-### Mobile:
-![Mobile Wireframe](./public/wireframes/wireframe_mobile.png)
-
-
-## PROOF OF CONCEPT:
-![Successfully interfacing with the Spotify Web API](./public/wireframes/proof_of_concept.png)
-Above is a screenshot of a successful interface with the Spotify Web API, allowing an artist to be searched for by a track name.
+![Desktop Wireframe](./public/screenshots/discovify-screenshot-1.png)
 
 ## TECH USED:
 
 ### Languages:
+
 - JavaScript
 - HTML
 - CSS
 
 ### Frameworks/Libraries/APIs:
+
 - React
 - Spotify Web API
 
-### Software:
+### Software/Services:
+
 - VSCodium
 - Figma
+- Heroku
 
+## HOW TO USE:
+### Signing In:
+Upon opening the app, you will be prompted to authenticate with your Spotify account. After doing so, you will be greeted with a search panel on the left, and a results panel on the right.
 
-## MVP:
-To successfully meet MVP, this project will need:
-- Successful integration of the Spotify Web API
-- Successful React-Django Integration
-- System for weighting different search parameters (genre, popularity, etc)
-- User authentication with the Spotify API
-- Implement links to songs listed
-- Interfacing with Spotify recommendation feature
+### Searching:
+In the search panel, you can fine-tune what you're looking for based on different song features and genres. Alternatively, you can simply press "FOR ME" to have a list of songs curated to your specific tastes fill the results panel.
 
+### Recommendation Results: 
+Once recommendations are visible, you can scroll through the results panel on the right to view them, clicking on a song will take you to that song's Spotify page, and if you desire, you can click the "CREATE PLAYLIST" button below, to turn your recommendations into a Spotify playlist on your account for you to easily listen to. (These playlists are private by default, but can be made public from your Spotify account)
 
-## STRETCH GOALS:
-If time permits, I would like to add:
-- More search parameters
-- Save recommended tracks to playlist
-- Recommend more than just tracks (albums, artists, etc)
-- Implement the Spotify Web Player API
-- Improve the front-end UI
+## ICEBOX FEATURES:
 
+In the future, I intend to add:
 
-## USER FLOW:
-When using this application, users will:
-- Be prompted to sign into their Spotify Profile
-- Select settings based on their preferences
-- Press search button to update/refresh results
-- View links and information about recommended songs
+- Timeframe length filtering for user's personalized recommendations
+- The ability to search for more media types than just songs (albums, artists, podcasts, etc)
+- The option to disable individual sliders if a user has no preference on a certain song attribute
+- The ability to search for non-personalized music without authenticating
+- A delay for the playlist button, to help prevent accidentally making the same one multiple times
+- A brief css animation for loading in song recommendations
+- Fitler song popularity by artist popularity instead, as the current song popularity parameter only takes the popularity of a song relative to its artist's other songs
+- The ability to use the web player API to sample recommended songs
+- A more polished and professional looking UI
+- More variation in the personalized song recommendations
 
+## UPDATE LOG:
 
+### 12/21/2023 Original Sprint Finished - v1.0
 
-## USER STORIES:
-AAU, I want to:
-- Easily sign into my Spotify account
-- Discover new music with an intuitive UI
-- filter music results to Fine-tune what I'm in the mood for
-- Gain easy access to recommended tracks
-
-
-## SPRINT BREAKDOWN:
-A brief plan for the 7-day development cycle:
-
-- Day 1: Create Authentication System
-- Day 2: Create Basic UI & Reccomendation System
-- Day 3: Improve UI
-- Day 4: Improve Filtering System / Reach MVP
-- Day 5: Polish / Bug Fix
-- Day 6: Polish
-- Day 7: Unplanned/Leeway for any unforseen issues that could arise in the development cycle
+- Basic features implemented over one-week sprint

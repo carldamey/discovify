@@ -1,17 +1,22 @@
 .ResultsArea {
-  overflow-y: auto;
-  height: 100%;
-  border: 2vh ridge black;
-  border-radius: 2%;
-background: rgb(75,75,75);
-background: linear-gradient(122deg, rgba(75,75,75,1) 0%, rgba(67,7,126,1) 100%);  width: 50%;
-background-position: s;
-display: flex;
-  flex-direction: column;
+	overflow-y: auto;
+	height: 100%;
+	border: 2vh ridge black;
+	border-radius: 2%;
+	background: rgb(75, 75, 75);
+	background: linear-gradient(
+		122deg,
+		rgba(75, 75, 75, 1) 0%,
+		rgba(67, 7, 126, 1) 100%
+	);
+	width: 50%;
+	background-position: s;
+	display: flex;
+	flex-direction: column;
 }
 
 .playlist {
-  border-top: 2vmin ridge black;
-  width: 100%;
-  margin: 1vmin auto 0;
+	border-top: 2vmin ridge black;
+	width: 100%;
+	margin: 1vmin auto 0;
 }

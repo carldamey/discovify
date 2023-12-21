@@ -20,7 +20,6 @@ var stateKey = "spotify_auth_state"
 
 var app = express()
 
-
 app.use(express.static(path.resolve(__dirname, "./build")))
 
 app
@@ -32,7 +31,6 @@ app
 app.get("/login", function (req, res) {
 	var state = generateRandomString(16)
 	res.cookie(stateKey, state)
-
 
 	var scope =
 		"user-read-private user-read-email playlist-modify-private playlist-modify-public user-top-read user-read-playback-state"
@@ -49,8 +47,6 @@ app.get("/login", function (req, res) {
 })
 
 app.get("/callback", function (req, res) {
-
-
 	var code = req.query.code || null
 	var state = req.query.state || null
 	var storedState = req.cookies ? req.cookies[stateKey] : null
@@ -91,10 +87,7 @@ app.get("/callback", function (req, res) {
 					json: true,
 				}
 
-				
-				request.get(options, function (error, response, body) {
-				})
-
+				request.get(options, function (error, response, body) {})
 
 				res.redirect(
 					"/#" +
@@ -114,7 +107,6 @@ app.get("/callback", function (req, res) {
 		})
 	}
 })
-
 
 app.get("*", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./build", "index.html"))

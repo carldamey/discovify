@@ -7,7 +7,6 @@ import ResultsArea from "../../components/ResultsArea/ResultsArea"
 
 function App() {
 	const [token, setToken] = useState("")
-	const [nowPlaying, setNowPlaying] = useState({})
 	const [loggedIn, setLoggedin] = useState(false)
 	const [songRecs, setSongRecs] = useState([])
 
@@ -25,12 +24,17 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar loggedIn={loggedIn} />
-			{loggedIn ? 
-			<div className="main">
-				<SearchArea loggedIn={loggedIn} setSongRecs={setSongRecs}/>
-				<ResultsArea songRecs={songRecs}/>
-			</div> : 
-				<h1>Log in to Spotify to get started!</h1>}
+			{loggedIn ? (
+				<div className="main">
+					<SearchArea
+						loggedIn={loggedIn}
+						setSongRecs={setSongRecs}
+					/>
+					<ResultsArea songRecs={songRecs} />
+				</div>
+			) : (
+				<h1>Log in to Spotify to get started!</h1>
+			)}
 		</div>
 	)
 }
