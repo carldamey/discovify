@@ -1,45 +1,43 @@
 .Results {
-  flex: 1;
-  overflow-y: auto;
+	flex: 1;
+	overflow-y: auto;
 }
 
 .song {
-  color: white;
-  margin: 2vmin auto;
-  font-size:3vmin;
-  /* text-justify: auto; */
-  background-color: rgba(128, 128, 128, 0.678);
-  border: .75vh ridge black;
-  border-radius: 2%;
-  display: flex;
-  transition-duration: 200ms;
-  height: 15vmin;
-  width: 85%;
-  align-items: center; /* Added */
-  justify-content: center; /* Added */
+	color: white;
+	margin: 2vmin auto;
+	font-size: 3vmin;
+	background-color: rgba(128, 128, 128, 0.678);
+	border: 0.75vh ridge black;
+	border-radius: 2%;
+	display: flex;
+	transition-duration: 200ms;
+	height: 15vmin;
+	width: 85%;
+	align-items: center;
+	justify-content: center;
 }
 
 .song:hover {
-  background-color: rgb(22, 22, 22);
-  translate: 30px;
-  /* transition: translate 200ms ease-in-out; */
-  transition: background-color 200ms ease-in-out, translate 300ms ease-in-out;
-  
+	background-color: rgb(22, 22, 22);
+	translate: 30px;
+	transition: background-color 200ms ease-in-out, translate 300ms ease-in-out;
+  cursor: pointer;
 }
 
-.song-image>img {
-  height: 12vmin;
-  border: 1vh ridge black;
-  border-radius: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5%;
+.song-image > img {
+	height: 12vmin;
+	border: 1vh ridge black;
+	border-radius: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 5%;
 }
 
 .song-text {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

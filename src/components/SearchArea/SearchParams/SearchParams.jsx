@@ -196,8 +196,8 @@ export default function SearchParams({setSongRecs}) {
 						</select>
 					</div>
 				</div>
-				<button type="submit">SEARCH</button>
 				<button onClick={() => discovifyAPI.searchTracksByAverage().then(response => setSongRecs(response))}>FOR ME</button>
+				<button type="submit">SEARCH</button>
 			</form>
 		</div>
 	)

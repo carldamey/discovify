@@ -194,7 +194,7 @@ function createPlaylist() {
 		spotifyAPI.getMe().then((user) => {
 			spotifyAPI
 				.createPlaylist(user.id, {
-					name: `Discovify Playlist ${new Date().toLocaleDateString()}`,
+					name: `Discovify Playlist - ${new Date().toLocaleDateString()}`,
 				})
 				.then((playlist) => {
 					console.log(playlist)

@@ -33,26 +33,35 @@
 }
 
 button {
-	background: linear-gradient(to bottom, rgba(128, 128, 128, 0.678) 5%, rgb(90, 71, 108) 100%);
+	background: linear-gradient(
+		to bottom,
+		rgba(128, 128, 128, 0.678) 5%,
+		rgb(90, 71, 108) 100%
+	);
 	background-color: rgba(128, 128, 128, 0.678);
 	border-radius: 6px;
-	border: .5vmin ridge black;
+	border: 0.5vmin ridge black;
 	display: inline-block;
 	cursor: pointer;
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 20px;
 	font-weight: bold;
-	padding: 10px 50px;
+	padding: 10px 50px 6px;
 	text-decoration: none;
 	justify-items: center;
-	transition: background-color ease-in-out 300ms;
+	transition-duration: 200ms;
+	margin: 1vmin;
 }
 
 button:hover {
-	background: linear-gradient(to bottom, rgba(92, 92, 92, 0.678) 5%, rgb(59, 47, 71) 100%);
+	background: linear-gradient(
+		to bottom,
+		rgba(92, 92, 92, 0.678) 5%,
+		rgb(59, 47, 71) 100%
+	);
 	background-color: rgba(92, 92, 92, 0.678);
-	transition: background-color ease-in-out 300ms;
+	transition: background-color ease-in-out 200ms;
 }
 button:active {
 	position: relative;
