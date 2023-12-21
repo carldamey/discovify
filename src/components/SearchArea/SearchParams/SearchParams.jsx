@@ -5,17 +5,17 @@ import discovifyAPI from "../../../utilities/discovify-api"
 
 export default function SearchParams({setSongRecs}) {
 	const [formData, setFormData] = useState({
-		popularity: 0,
-		energy: 0,
-		tempo: 0,
-		valence: 0,
-		danceability: 0,
-		acousticness: 0,
-		genre1: "",
-		genre2: "",
-		genre3: "",
-		genre4: "",
-		genre5: "",
+		popularity: 50,
+		energy: .5,
+		tempo: .5,
+		valence: .5,
+		danceability: .5,
+		acousticness: .5,
+		genre1: "acoustic",
+		genre2: "-NONE-",
+		genre3: "-NONE-",
+		genre4: "-NONE-",
+		genre5: "-NONE-",
 	})
 
 	function handleSliderChange(e) {
