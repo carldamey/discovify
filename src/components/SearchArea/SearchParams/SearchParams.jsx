@@ -3,7 +3,8 @@ import genres from "./genres"
 import {useState} from "react"
 import discovifyAPI from "../../../utilities/discovify-api"
 
-export default function SearchParams() {
+export default function SearchParams({setSongRecs}) {
+
 	const [formData, setFormData] = useState({
 		popularity: 0,
 		energy: 0,
@@ -37,7 +38,9 @@ export default function SearchParams() {
 	function handleSearch(e) {
 		e.preventDefault()
 		console.log(formData)
-		discovifyAPI.searchTracksByParams(formData)
+		discovifyAPI.searchTracksByParams(formData).then((response) => {
+			setSongRecs(response)
+		})
 	}
 
 	return (

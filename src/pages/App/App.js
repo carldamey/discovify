@@ -29,7 +29,7 @@ function App() {
 		<div className="App">
 			<Navbar loggedIn={loggedIn} />
 			<div className="main">
-				<SearchArea loggedIn={loggedIn} songRecs={songRecs} setSongRecs={setSongRecs}/>
+				<SearchArea loggedIn={loggedIn} setSongRecs={setSongRecs}/>
 				<ResultsArea songRecs={songRecs}/>
 			</div>
 			{/* {loggedIn && (
