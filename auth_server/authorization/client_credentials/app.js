@@ -36,6 +36,5 @@ async function getTrackInfo(access_token) {
 
 getToken().then(response => {
   getTrackInfo(response.access_token).then(profile => {
-    console.log(profile)
   })
 });

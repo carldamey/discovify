@@ -12,10 +12,8 @@ function App() {
 	const [songRecs, setSongRecs] = useState([])
 
 	useEffect(() => {
-		console.log("token from url:", discovifyAPI.getTokenFromUrl())
 		const spotifyToken = discovifyAPI.getTokenFromUrl().access_token
 		window.location.hash = ""
-		console.log("token:", spotifyToken)
 
 		if (spotifyToken) {
 			setToken(spotifyToken)

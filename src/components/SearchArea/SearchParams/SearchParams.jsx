@@ -36,7 +36,6 @@ export default function SearchParams({setSongRecs}) {
 
 	function handleSearch(e) {
 		e.preventDefault()
-		console.log(formData)
 		discovifyAPI.searchTracksByParams(formData).then((response) => {
 			setSongRecs(response)
 		})

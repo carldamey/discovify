@@ -31,7 +31,6 @@ function getTokenFromUrl() {
 function setAccessToken(spotifyToken) {
 	spotifyAPI.setAccessToken(spotifyToken)
 	spotifyAPI.getMe().then((user) => {
-		console.log(user)
 	})
 }
 
@@ -163,9 +162,7 @@ function searchTracksByParams(formData) {
 	let genreSeedsString = ""
 	for (let i = 1; i <= 5; i++) {
 		if (formData[`genre${i}`] === "-NONE-") formData[`genre${i}`] = ""
-		console.log(typeof formData[`genre${i}`])
 		genreSeedsString += formData[`genre${i}`] + ","
-		console.log(genreSeedsString)
 	}
 	return new Promise((resolve, reject) => {
 		spotifyAPI
@@ -179,14 +176,13 @@ function searchTracksByParams(formData) {
 				target_valence: formData.valence,
 			})
 			.then((response) => {
-				console.log(Object.values(Object.values(response.tracks)))
 				resolve(Object.values(Object.values(response.tracks)))
 			})
 	})
 }
 
 function genreSeeds() {
-	spotifyAPI.getAvailableGenreSeeds().then((response) => console.log(response))
+	spotifyAPI.getAvailableGenreSeeds().then((response) => {return response}))
 }
 
 function createPlaylist() {
@@ -197,7 +193,6 @@ function createPlaylist() {
 					name: `Discovify Playlist - ${new Date().toLocaleDateString()}`,
 				})
 				.then((playlist) => {
-					console.log(playlist)
 					resolve(playlist)
 				})
 		})
@@ -209,7 +204,6 @@ function createAndFillPlaylist(songRecs) {
 	songRecs.forEach(song => {
 		songUris.push(song.uri)
 	})
-	console.log(songUris)
 	return new Promise((resolve, reject) => {
 	createPlaylist().then((playlist) => {
 		spotifyAPI.addTracksToPlaylist(playlist.id, songUris)
