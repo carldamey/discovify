@@ -32,7 +32,7 @@ function App() {
 				<SearchArea loggedIn={loggedIn} setSongRecs={setSongRecs}/>
 				<ResultsArea songRecs={songRecs}/>
 			</div> : 
-				<h1>Log in to get started!</h1>}
+				<h1>Log in to Spotify to get started!</h1>}
 		</div>
 	)
 }

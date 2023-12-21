@@ -1,20 +1,46 @@
 .SearchParams {
 	display: flex;
+	align-items: stretch;
 	flex-direction: row;
-	font-size: xx-large;
+	font-size: 2.3vmin;
 	width: 100%;
 }
 
 .slider {
-	/* align-items: stretch; */
-  margin: 5% auto;
-	border: .5vmin ridge black;
-	background-color: rgba(128, 128, 128, 0.678);
-	color: white;
+	padding: .3vmin;
+  border: .5vmin ridge black;
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.678);
+	width: 100%;
+	margin: .5vmin 0;
+	text-align: left;
 }
 
-.slider>range {
- width: 100%
+input[type="range"] {
+  background: black;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
 }
 
 h3 {
@@ -22,9 +48,9 @@ h3 {
 	color: white;
 }
 
-/* Style the select element */
+
 select {
-  padding: 8px;
+  padding: .8vmin;
   border: .5vmin ridge black;
   border-radius: 4px;
   font-size: 16px;
@@ -34,7 +60,7 @@ select {
 	margin: .5vmin 0;
 }
 
-/* Style the dropdown arrow */
+
 select::after {
   content: "";
   position: absolute;
@@ -49,13 +75,14 @@ select::after {
   pointer-events: none;
 }
 
-/* Style the dropdown options */
+
 select option {
   color: #333;
-  background-color: #fff;
+	border: 3px solid black;
+  background-color: rgba(128, 128, 128, 0.678);
 }
 
-/* Hover effect on dropdown options */
+
 select option:hover {
   background-color: #f2f2f2;
 }

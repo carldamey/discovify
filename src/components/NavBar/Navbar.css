@@ -6,35 +6,34 @@
 		rgb(110, 12, 208) 100%
 	);
 	display: flex;
-  border-bottom: 1vmin ridge white;
-  color: white;
-  font-size: xx-large;
-  height: 10vmin;
+	border-bottom: 1vmin ridge white;
+	color: white;
+	font-size: 3vmin;
+	height: 10vmin;
 }
 
 .title {
-  text-align: left;
-  width: 100%;
-  /* margin-left: 5%; */
-  display: flex;
-  justify-content: flex-start;
+	text-align: left;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
 }
 img {
-  height: 8vmin;
-  margin: 0 1vmin;
+	height: 8vmin;
+	margin: 0 1vmin;
 }
 
 a {
-  width: 10%;
-  color: white;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  height: 100%
+	width: 10%;
+	color: white;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	height: 100%;
 }
 
 a:hover {
-  background-color: rgba(0, 0, 0, 0.116);
+	background-color: rgba(0, 0, 0, 0.116);
 }

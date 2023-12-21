@@ -8,7 +8,7 @@ export default function SearchArea({loggedIn, setSongRecs}) {
 		<div className="SearchArea">
 			{/* <TypeFilters /> */}
 			<SearchParams setSongRecs={setSongRecs}/>
-			<AltSearches loggedIn={loggedIn} setSongRecs={setSongRecs}/>
+			{/* <AltSearches loggedIn={loggedIn} setSongRecs={setSongRecs}/> */}
 		</div>
 	)
 }

@@ -6,7 +6,7 @@
 .song {
   color: white;
   margin: 2vmin auto;
-  font-size:xx-large;
+  font-size:3vmin;
   /* text-justify: auto; */
   background-color: rgba(128, 128, 128, 0.678);
   border: .75vh ridge black;
