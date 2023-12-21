@@ -1,4 +1,3 @@
-import logo from "../../img/logo.svg"
 import discovifyAPI from "../../utilities/discovify-api"
 import "./App.css"
 import React, {useState, useEffect} from "react"

@@ -15,7 +15,13 @@
 .title {
   text-align: left;
   width: 100%;
-  margin-left: 5%;
+  /* margin-left: 5%; */
+  display: flex;
+  justify-content: flex-start;
+}
+img {
+  height: 8vmin;
+  margin: 0 1vmin;
 }
 
 a {
@@ -25,7 +31,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto
+  margin: auto;
+  height: 100%
 }
 
 a:hover {
