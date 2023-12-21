@@ -19,7 +19,7 @@ var path = require("path")
 
 var client_id = process.env.CLIENT_ID // your clientId
 var client_secret = process.env.CLIENT_SECRET // Your secret
-var redirect_uri = "http://localhost:8888/callback" // Your redirect uri
+var redirect_uri = "https://discovify-57edf8e39469.herokuapp.com//callback" // Your redirect uri
 
 const generateRandomString = (length) => {
 	return crypto.randomBytes(60).toString("hex").slice(0, length)
