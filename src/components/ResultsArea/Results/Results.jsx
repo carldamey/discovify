@@ -3,11 +3,6 @@ import "./Results.css"
 export default function Results({songRecs}) {
   return(
     <div className="Results">
-      {/* {{if (songRecs) {
-        songRecs.map(song => {
-          <p>{song.name}</p>
-        })
-      }}} */}
       {songRecs.length > 0 && 
       songRecs.map(song => {
         return(

@@ -1,12 +1,3 @@
-/**
- * This is an example of a basic node.js script that performs
- * the Authorization Code oAuth2 flow to authenticate against
- * the Spotify Accounts.
- *
- * For more information, read
- * https://developer.spotify.com/documentation/web-api/tutorials/code-flow
- */
-
 require("dotenv").config()
 
 var express = require("express")
@@ -17,9 +8,9 @@ var querystring = require("querystring")
 var cookieParser = require("cookie-parser")
 var path = require("path")
 
-var client_id = process.env.CLIENT_ID // your clientId
-var client_secret = process.env.CLIENT_SECRET // Your secret
-var redirect_uri = "https://discovify-57edf8e39469.herokuapp.com/callback" // Your redirect uri
+var client_id = process.env.CLIENT_ID
+var client_secret = process.env.CLIENT_SECRET
+var redirect_uri = "https://discovify-57edf8e39469.herokuapp.com/callback"
 
 const generateRandomString = (length) => {
 	return crypto.randomBytes(60).toString("hex").slice(0, length)
@@ -29,9 +20,7 @@ var stateKey = "spotify_auth_state"
 
 var app = express()
 
-// server/index.js
 
-// Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, "./build")))
 
 app
@@ -44,7 +33,7 @@ app.get("/login", function (req, res) {
 	var state = generateRandomString(16)
 	res.cookie(stateKey, state)
 
-	// your application requests authorization
+
 	var scope =
 		"user-read-private user-read-email playlist-modify-private playlist-modify-public user-top-read user-read-playback-state"
 	res.redirect(
@@ -60,8 +49,7 @@ app.get("/login", function (req, res) {
 })
 
 app.get("/callback", function (req, res) {
-	// your application requests refresh and access tokens
-	// after checking the state parameter
+
 
 	var code = req.query.code || null
 	var state = req.query.state || null
@@ -103,11 +91,11 @@ app.get("/callback", function (req, res) {
 					json: true,
 				}
 
-				// use the access token to access the Spotify Web API
+				
 				request.get(options, function (error, response, body) {
 				})
 
-				// we can also pass the token to the browser to make requests from there
+
 				res.redirect(
 					"/#" +
 						querystring.stringify({
@@ -127,7 +115,7 @@ app.get("/callback", function (req, res) {
 	}
 })
 
-// All other GET requests not handled before will return our React app
+
 app.get("*", (req, res) => {
 	res.sendFile(path.resolve(__dirname, "./build", "index.html"))
 })
