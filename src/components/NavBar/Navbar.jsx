@@ -10,7 +10,7 @@ export default function Navbar({loggedIn}) {
 			{/* <button>ABOUT</button> */}
 			{/* <button>HOW TO USE</button> */}
 			{(!loggedIn) &&
-			<a href="http://localhost:8888/login">LOG IN</a>}
+			<a href="/login">LOG IN</a>}
 		</div>
 	)
 }
