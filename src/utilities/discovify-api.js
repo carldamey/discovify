@@ -13,6 +13,8 @@ const methods = {
 	searchTracksByAverage,
 	genreSeeds,
 	searchTracksByParams,
+	createPlaylist,
+	createAndFillPlaylist,
 }
 
 function getTokenFromUrl() {
@@ -56,22 +58,6 @@ function getTopTracks() {
 		})
 	})
 }
-
-// function getTopArtists() {
-// 	return new Promise((resolve, reject) => {
-// 		getTopTracks().then((response) => {
-// 			const topArtistsArray = []
-// 			response.forEach((track) => {
-// 				track.artists.forEach((artist) => {
-// 					topArtistsArray.push(artist.id)
-// 				})
-// 			})
-// 			spotifyAPI.getArtists(topArtistsArray).then((response) => {
-// 				resolve(response.artists)
-// 			})
-// 		})
-// 	})
-// }
 
 function getTopArtists() {
 	return new Promise((resolve, reject) => {
@@ -201,6 +187,33 @@ function searchTracksByParams(formData) {
 
 function genreSeeds() {
 	spotifyAPI.getAvailableGenreSeeds().then((response) => console.log(response))
+}
+
+function createPlaylist() {
+	return new Promise((resolve, reject) => {
+		spotifyAPI.getMe().then((user) => {
+			spotifyAPI
+				.createPlaylist(user.id, {
+					name: `Discovify Playlist ${new Date().toLocaleDateString()}`,
+				})
+				.then((playlist) => {
+					console.log(playlist)
+					resolve(playlist)
+				})
+		})
+	})
+}
+
+function createAndFillPlaylist(songRecs) {
+	let songUris = []
+	songRecs.forEach(song => {
+		songUris.push(song.uri)
+	})
+	console.log(songUris)
+	return new Promise((resolve, reject) => {
+	createPlaylist().then((playlist) => {
+		spotifyAPI.addTracksToPlaylist(playlist.id, songUris)
+	})})
 }
 
 export default methods
