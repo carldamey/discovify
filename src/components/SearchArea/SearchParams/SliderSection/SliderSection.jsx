@@ -1,7 +1,8 @@
 import "./SliderSection"
+import genres from "./genres"
 
 function searchForSongs() {
-  
+
 }
 
 export default function SliderSection() {
@@ -46,6 +47,62 @@ export default function SliderSection() {
 					</div>
 				</label>
 			</form>
+
+
+      <label>
+					GENRE
+					<div className="dropdown">
+						<select>
+              {genres.map(genre => { return(
+                <option value={genre}>{genre.toUpperCase()}</option>
+              )})}
+            </select>
+					</div>
+				</label>
+        <label>
+					GENRE
+					<div className="dropdown">
+						<select>
+              {genres.map(genre => { return(
+                <option value={genre}>{genre.toUpperCase()}</option>
+              )})}
+            </select>
+					</div>
+				</label>
+        <label>
+					GENRE
+					<div className="dropdown">
+						<select>
+              {genres.map(genre => { return(
+                <option value={genre}>{genre.toUpperCase()}</option>
+              )})}
+            </select>
+					</div>
+				</label>
+        <label>
+					GENRE
+					<div className="dropdown">
+						<select>
+              {genres.map(genre => { return(
+                <option value={genre}>{genre.toUpperCase()}</option>
+              )})}
+            </select>
+					</div>
+				</label>
+        <label>
+					GENRE
+					<div className="dropdown">
+						<select>
+              {genres.map(genre => { return(
+                <option value={genre}>{genre.toUpperCase()}</option>
+              )})}
+            </select>
+					</div>
+				</label>
 		</div>
 	)
 }
+
+
+
+
