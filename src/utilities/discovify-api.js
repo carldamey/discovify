@@ -182,7 +182,7 @@ function searchTracksByParams(formData) {
 }
 
 function genreSeeds() {
-	spotifyAPI.getAvailableGenreSeeds().then((response) => {return response}))
+	spotifyAPI.getAvailableGenreSeeds().then((response) => {return response})
 }
 
 function createPlaylist() {
