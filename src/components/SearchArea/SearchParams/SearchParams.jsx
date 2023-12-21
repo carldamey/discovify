@@ -4,7 +4,6 @@ import {useState} from "react"
 import discovifyAPI from "../../../utilities/discovify-api"
 
 export default function SearchParams({setSongRecs}) {
-
 	const [formData, setFormData] = useState({
 		popularity: 0,
 		energy: 0,
@@ -49,7 +48,7 @@ export default function SearchParams({setSongRecs}) {
 				<div className="sliders">
 					<div className="slider">
 						<label>
-							POPULARITY
+							POPULARITY:
 							<input
 								name="popularity"
 								type="range"
@@ -62,7 +61,7 @@ export default function SearchParams({setSongRecs}) {
 					</div>
 					<div className="slider">
 						<label>
-							ENERGY
+							ENERGY:
 							<input
 								name="energy"
 								type="range"
@@ -76,7 +75,7 @@ export default function SearchParams({setSongRecs}) {
 					</div>
 					<div className="slider">
 						<label>
-							TEMPO
+							TEMPO:
 							<input
 								name="tempo"
 								type="range"
@@ -90,7 +89,7 @@ export default function SearchParams({setSongRecs}) {
 					</div>
 					<div className="slider">
 						<label>
-							MOOD
+							MOOD:
 							<input
 								name="valence"
 								type="range"
@@ -104,7 +103,7 @@ export default function SearchParams({setSongRecs}) {
 					</div>
 					<div className="slider">
 						<label>
-							DANCEABILITY
+							DANCEABILITY:
 							<input
 								name="danceability"
 								type="range"
@@ -118,7 +117,7 @@ export default function SearchParams({setSongRecs}) {
 					</div>
 					<div className="slider">
 						<label>
-							ACOUSTICNESS
+							ACOUSTICNESS:
 							<input
 								name="acousticness"
 								type="range"
@@ -134,7 +133,7 @@ export default function SearchParams({setSongRecs}) {
 
 				<div className="dropdowns">
 					<label>
-						GENRE
+						GENRES:
 						<div className="dropdown">
 							<select
 								name="genre1"
@@ -147,62 +146,54 @@ export default function SearchParams({setSongRecs}) {
 							</select>
 						</div>
 					</label>
-					<label>
-						GENRE
-						<div className="dropdown">
-							<select
-								name="genre2"
-								value={formData.genre2}
-								onChange={handleDropdownChange}
-							>
-								{genres.map((genre) => {
-									return <option value={genre}>{genre.toUpperCase()}</option>
-								})}
-							</select>
-						</div>
-					</label>
-					<label>
-						GENRE
-						<div className="dropdown">
-							<select
-								name="genre3"
-								value={formData.genre3}
-								onChange={handleDropdownChange}
-							>
-								{genres.map((genre) => {
-									return <option value={genre}>{genre.toUpperCase()}</option>
-								})}
-							</select>
-						</div>
-					</label>
-					<label>
-						GENRE
-						<div className="dropdown">
-							<select
-								name="genre4"
-								value={formData.genre4}
-								onChange={handleDropdownChange}
-							>
-								{genres.map((genre) => {
-									return <option value={genre}>{genre.toUpperCase()}</option>
-								})}
-							</select>
-						</div>
-					</label>
-					<label>
-						GENRE
-						<div className="dropdown">
-							<select
-								name="genre5"
-								value={formData.genre5}
-								onChange={handleDropdownChange}
-							>
-								{genres.map((genre) => {
-									return <option value={genre}>{genre.toUpperCase()}</option>
-								})}
-							</select>
-						</div>
-					</label>
+
+					<div className="dropdown">
+						<select
+							name="genre2"
+							value={formData.genre2}
+							onChange={handleDropdownChange}
+						>
+							{genres.map((genre) => {
+								return <option value={genre}>{genre.toUpperCase()}</option>
+							})}
+						</select>
+					</div>
+
+					<div className="dropdown">
+						<select
+							name="genre3"
+							value={formData.genre3}
+							onChange={handleDropdownChange}
+						>
+							{genres.map((genre) => {
+								return <option value={genre}>{genre.toUpperCase()}</option>
+							})}
+						</select>
+					</div>
+
+					<div className="dropdown">
+						<select
+							name="genre4"
+							value={formData.genre4}
+							onChange={handleDropdownChange}
+						>
+							{genres.map((genre) => {
+								return <option value={genre}>{genre.toUpperCase()}</option>
+							})}
+						</select>
+					</div>
+
+					<div className="dropdown">
+						<select
+							name="genre5"
+							value={formData.genre5}
+							onChange={handleDropdownChange}
+						>
+							{genres.map((genre) => {
+								return <option value={genre}>{genre.toUpperCase()}</option>
+							})}
+						</select>
+					</div>
 				</div>
 				<button type="submit">SEARCH</button>
 			</form>

@@ -13,10 +13,14 @@ export default function Results({songRecs}) {
       songRecs.map(song => {
         return(
         <div className="song">
+          <div className="song-image">
           <img src={song.album.images[1].url}/>
+          </div>
+          <div className="song-text">
           {song.name}
           <br/>
           {song.artists[0].name}
+          </div>
         </div>)
       })
       }

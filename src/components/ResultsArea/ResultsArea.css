@@ -1,8 +1,11 @@
 .ResultsArea {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
-  border: 3vh solid black;
-  background: purple;
-  width: 40%;
-  display: flex;
+  border: 2vh ridge black;
+  border-radius: 2%;
+background: rgb(75,75,75);
+background: linear-gradient(122deg, rgba(75,75,75,1) 0%, rgba(67,7,126,1) 100%);  width: 50%;
+background-position: s;
+display: flex;
+  flex-direction: column;
 }

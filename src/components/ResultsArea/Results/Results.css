@@ -1,18 +1,21 @@
 .Results {
-  /* overflow-y: scroll; */
-  align-items: stretch;
+  flex: 1;
+  overflow-y: auto;
 }
 
 .song {
   color: white;
-  margin: 2vh auto;
+  margin: 2vmin auto;
   font-size:xx-large;
-  text-justify: auto;
+  /* text-justify: auto; */
   background-color: rgba(128, 128, 128, 0.678);
-  border: 1vh solid black;
-  text-align: center;
+  border: 1vh ridge black;
   display: flex;
-  justify-content: baseline;
+  transition-duration: 200ms;
+  height: 15vmin;
+  width: 85%;
+  align-items: center; /* Added */
+  justify-content: center; /* Added */
 }
 
 .song:hover {
@@ -23,9 +26,19 @@
   
 }
 
-.song>img {
-  height: 200px;
-  border: 1vh solid black;
-  border-style: ridge;
+.song-image>img {
+  height: 12vmin;
+  border: 1vh ridge black;
   border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.song-text {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

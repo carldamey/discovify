@@ -6,7 +6,7 @@ import AltSearches from "./AltSearches/AltSearches"
 export default function SearchArea({loggedIn, setSongRecs}) {
 	return (
 		<div className="SearchArea">
-			<TypeFilters />
+			{/* <TypeFilters /> */}
 			<SearchParams setSongRecs={setSongRecs}/>
 			<AltSearches loggedIn={loggedIn} setSongRecs={setSongRecs}/>
 		</div>
