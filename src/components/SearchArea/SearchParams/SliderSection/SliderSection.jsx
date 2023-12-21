@@ -1,42 +1,46 @@
 import "./SliderSection"
 
+function searchForSongs() {
+  
+}
+
 export default function SliderSection() {
 	return (
 		<div className="SliderSection">
 			<h1>sliders</h1>
 			<form>
 				<label>
-					Popularity
+					POPULARITY
 					<div className="slider">
 						<input type="range"></input>
 					</div>
 				</label>{" "}
 				<label>
-					Popularity
+					TEMPO
 					<div className="slider">
 						<input type="range"></input>
 					</div>
 				</label>
 				<label>
-					Popularity
+					ENERGY
 					<div className="slider">
 						<input type="range"></input>
 					</div>
 				</label>
 				<label>
-					Popularity
+					VALENCE
 					<div className="slider">
 						<input type="range"></input>
 					</div>
 				</label>
 				<label>
-					Popularity
+					DANCEABILITY
 					<div className="slider">
 						<input type="range"></input>
 					</div>
 				</label>
 				<label>
-					Popularity
+					ACOUSTICNESS
 					<div className="slider">
 						<input type="range"></input>
 					</div>

@@ -7,16 +7,20 @@
   color: white;
   margin: 2vh auto;
   font-size:xx-large;
-  text-align: start;
   text-justify: auto;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.678);
   border: 1vh solid black;
-  text-align: left;
-  justify-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: baseline;
 }
 
 .song:hover {
-  background-color: black;
+  background-color: rgb(22, 22, 22);
+  translate: 30px;
+  /* transition: translate 200ms ease-in-out; */
+  transition: background-color 200ms ease-in-out, translate 300ms ease-in-out;
+  
 }
 
 .song>img {
@@ -24,5 +28,4 @@
   border: 1vh solid black;
   border-style: ridge;
   border-radius: 10%;
-  align-self: flex-start;
 }
