@@ -4,7 +4,7 @@ export default function Navbar({loggedIn}) {
 	return (
 		<div className="Navbar">
 			<div className="title">
-				<img src="/logo.svg" />
+				<img src="/logo.svg" alt="Discovify logo" />
 			<h1>DISCOVIFY</h1>
 			</div>
 			{/* <button>ABOUT</button> */}
