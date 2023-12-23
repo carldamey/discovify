@@ -2,6 +2,7 @@ import "./SearchParams.css"
 import genres from "./genres"
 import {useState} from "react"
 import discovifyAPI from "../../../utilities/discovify-api"
+import TypeFilters from "./TypeFilters/TypeFilters"
 
 export default function SearchParams({setSongRecs}) {
 	const [formData, setFormData] = useState({
@@ -43,6 +44,7 @@ export default function SearchParams({setSongRecs}) {
 
 	return (
 		<div className="SearchParams">
+			<TypeFilters />
 			<form onSubmit={handleSearch}>
 				<h3>ATTRIBUTES:</h3>
 				<div className="sliders">

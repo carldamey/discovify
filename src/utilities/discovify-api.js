@@ -136,7 +136,7 @@ function getAttributeAverages() {
 	})
 }
 
-async function searchTracksByAverage() {
+async function searchTracksByAverage(type = "track") {
 	const seedArtists = await getTopArtists()
 	return new Promise((resolve, reject) => {
 		getAttributeAverages().then((response) => {
