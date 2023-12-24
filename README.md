@@ -63,8 +63,8 @@ Overall I'm quite proud of this project and I learned a lot in a very short time
 ## UPDATE LOG:
 
 ### 12/21/2023 Original Sprint Finished - v1.0
+- Basic features implemented over one-week sprint
 
 ## KNOWN ISSUES:
 - The border above the playlist button cuts off part of any song card intersecting with it.
-
-- Basic features implemented over one-week sprint
+- 
