@@ -67,4 +67,3 @@ Overall I'm quite proud of this project and I learned a lot in a very short time
 
 ## KNOWN ISSUES:
 - The border above the playlist button cuts off part of any song card intersecting with it.
-- 
