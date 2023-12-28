@@ -6,7 +6,7 @@ https://discovify-57edf8e39469.herokuapp.com/#
 
 ![Desktop Wireframe](./public/screenshots/discovify-screenshot-1.png)
 
-## TECH USED:
+## TECH USED
 
 ### Languages:
 
@@ -25,7 +25,7 @@ https://discovify-57edf8e39469.herokuapp.com/#
 - Figma
 - Heroku
 
-## HOW TO USE:
+## HOW TO USE
 ### Signing In:
 Upon opening the app, you will be prompted to authenticate with your Spotify account. After doing so, you will be greeted with a search panel on the left, and a results panel on the right.
 
@@ -35,7 +35,7 @@ In the search panel, you can fine-tune what you're looking for based on differen
 ### Recommendation Results: 
 Once recommendations are visible, you can scroll through the results panel on the right to view them, clicking on a song will take you to that song's Spotify page, and if you desire, you can click the "CREATE PLAYLIST" button below, to turn your recommendations into a Spotify playlist on your account for you to easily listen to. (These playlists are private by default, but can be made public from your Spotify account)
 
-## ICEBOX FEATURES:
+## ICEBOX FEATURES
 
 In the future, I intend to add:
 
@@ -51,7 +51,7 @@ In the future, I intend to add:
 - More variation in the personalized song recommendations
 - A responsive UI
 
-## CREATION:
+## CREATION
 This project was developed in a one week sprint as a capstone project for my bootcamp. The original intention was to use Django rather than react, however, after considering the ambitiousness of my ideas, being slightly newer to Django, and the short timeframe allotted, I decided about midway through the sprint to swtich to JavaScript, and dedicate another project to learning the DR stack more thoroughly. 
 
 Interfacing with the API was by far the biggest time sink for me. It took quite a while for me to piece together how it all worked, but it was immensely satisfying each time one of my functions would finally successfully resolve.
@@ -60,10 +60,10 @@ I took a lot more care into refining my wireframes for this project, and I think
 
 Overall I'm quite proud of this project and I learned a lot in a very short timespan. I'm excited to build more features out and to polish the UI further.
 
-## UPDATE LOG:
+## UPDATE LOG
 
 ### 12/21/2023 Original Sprint Finished - v1.0
 - Basic features implemented over one-week sprint
 
-## KNOWN ISSUES:
+## KNOWN ISSUES
 - The border above the playlist button cuts off part of any song card intersecting with it.
