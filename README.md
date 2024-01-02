@@ -26,6 +26,7 @@ https://discovify-57edf8e39469.herokuapp.com/#
 - Heroku
 
 ## HOW TO USE
+
 ### Signing In:
 Upon opening the app, you will be prompted to authenticate with your Spotify account. After doing so, you will be greeted with a search panel on the left, and a results panel on the right.
 
@@ -52,6 +53,7 @@ In the future, I intend to add:
 - A responsive UI
 
 ## CREATION
+
 This project was developed in a one week sprint as a capstone project for my bootcamp. The original intention was to use Django rather than react, however, after considering the ambitiousness of my ideas, being slightly newer to Django, and the short timeframe allotted, I decided about midway through the sprint to swtich to JavaScript, and dedicate another project to learning the DR stack more thoroughly. 
 
 Interfacing with the API was by far the biggest time sink for me. It took quite a while for me to piece together how it all worked, but it was immensely satisfying each time one of my functions would finally successfully resolve.
@@ -66,4 +68,5 @@ Overall I'm quite proud of this project and I learned a lot in a very short time
 - Basic features implemented over one-week sprint
 
 ## KNOWN ISSUES
+
 - The border above the playlist button cuts off part of any song card intersecting with it.
