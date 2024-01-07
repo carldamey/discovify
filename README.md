@@ -40,7 +40,7 @@ Once recommendations are visible, you can scroll through the results panel on th
 
 In the future, I intend to add:
 
-- Timeframe length filtering for user's personalized recommendations
+- Timeframe length filtering for a user's personalized recommendations
 - The ability to search for more media types than just songs (albums, artists, podcasts, etc)
 - The option to disable individual sliders if a user has no preference on a certain song attribute
 - The ability to search for non-personalized music without authenticating
