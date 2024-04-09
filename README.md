@@ -1,8 +1,8 @@
 # DISCOVIFY
 
-DISCOVIFY is a React-based music recommendation that makes heavy use of Spotify's web api. Users can authenticate using a Spotify account, and can then search for music based on several parameters, or alternatively, have a search made for you, based on your profile's most streamed songs. Songs can be viewed individualy by clicking on them, and if desired, a playlist can be created with these results by simply pressing its respective button underneath the recommendations.
+### LIVE SITE: https://discovify-57edf8e39469.herokuapp.com/#
 
-https://discovify-57edf8e39469.herokuapp.com/#
+DISCOVIFY is a React-based music recommendation that makes heavy use of Spotify's web api. Users can authenticate using a Spotify account, and can then search for music based on several parameters, or alternatively, have a search made for you, based on your profile's most streamed songs. Songs can be viewed individualy by clicking on them, and if desired, a playlist can be created with these results by simply pressing its respective button underneath the recommendations.
 
 ![Desktop Wireframe](./public/screenshots/discovify-screenshot-1.png)
 
